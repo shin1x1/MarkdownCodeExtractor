@@ -17,9 +17,10 @@ $outputPath = $argv[3] ?? getcwd();
 
 $pathExtractor = new MarkdownPathExtractor();
 
-$parser = (new MarkdownParser())->addFilter(function (string $code): string {
-    return preg_replace('/\(snip\)/', '(略)', $code);
-});
+//$parser = (new MarkdownParser())->addFilter(function (string $code): string {
+//    return preg_replace('/\(snip\)/', '(略)', $code);
+//});
+$parser = new MarkdownParser();
 
 $publisher = new CodePublisher($outputPath, $outputFileprefix . '%03d.txt');
 
