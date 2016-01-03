@@ -1,3 +1,3 @@
 alltests:
-		vendor/bin/phpunit
+		php vendor/bin/phpunit
 		php codecept.phar run
