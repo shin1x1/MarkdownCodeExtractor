@@ -9,7 +9,6 @@
         "timetoogo/pinq": "~3.3"
     },
     "require-dev": {
-        "phpunit/phpunit": "~5.1",
         "codeception/codeception": "*"
     }
 }
