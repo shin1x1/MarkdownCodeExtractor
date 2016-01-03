@@ -1,0 +1,21 @@
+language: php
+sudo: false
+
+php:
+  - 7.0
+
+branches:
+  only:
+  - master
+
+before_script:
+  - composer self-update
+  - composer install --prefer-source --no-interaction --dev
+  - wget http://codeception.com/codecept.phar
+
+script:
+  - make
+
+notifications:
+  slack:
+    secure: JXvJ4pZhiSP/30VCJK8kC9XWlroE9LeGfNhk8dz9TxwuTFcIry9WmFp2hdsy08AZhXm5f53uutvFhEAnwRRGXHpZfdlUVKuP/JEsEQOCEojIsxdNkYxrMvMuhy1hjaivbxMTqJj4jGjBQwNMWjHWUAExBgF8kxDHUBzI07t/gs+sjwl77xbU3PYRhNRKXVT+s+TnOG1FWwc+pgifSsGNknF/BRIQ9zSqbKwfmo3qHjVZCVwTg7rqYiWDKvZOh7nSHXjuUuqmSP9kRCNwJAfYlkMy2y5MMkUBC3Js67pdTBvD9hO9TE82OgpBEVcn1dDe13H2iYYXZLQ+LTVJ7GOiscjW+P8/lTk/V63LIBIQ+e7WZ9FsfiIUcWlihs2B1oJCONLM91p/jXw+VXY4gN0OSPGDY/xcElGA2VmRKqc7C34vNV7OeL51Np3aaKKjl6rZorRjtjRA+Ka+h8Xga/zI49OWQMWntxJYx32wcAK+ig6zkdrtHKOr1cVRwwDdwO+2z5Wmvmqxb6MD+BG22i6ALFKHGsYBfv1q0Nojd+/6mzPTcMd8xiGBNSASldS8BXtxqUnwwZ0vgh9yWApvVQxtjcs/cThHA5sPXy9wZHQcfsNIyh42jvKVuM+/Ua4eEBDG+INA0ZUBkMmMUspb+lNovpbE5pJXWFB70z6UiVTkrCo=
