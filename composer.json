@@ -6,7 +6,6 @@
         }
     },
     "require": {
-        "cebe/markdown": "~1.0.1",
         "timetoogo/pinq": "~3.3"
     },
     "require-dev": {
