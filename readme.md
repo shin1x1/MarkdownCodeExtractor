@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/shin1x1/MarkdownCodeExtractor.svg?branch=master)](https://travis-ci.org/shin1x1/MarkdownCodeExtractor)
 
-MarkdownCodeExtractor is a markdown code blocks extractor that reads from markdown files and publish to each file.
+MarkdownCodeExtractor is a markdown code blocks extractor that reads from markdown files and publish each code blocks.
 
 Requirements: PHP 7 or above
 
