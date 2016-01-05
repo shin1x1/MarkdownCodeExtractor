@@ -1,18 +1,20 @@
 <?php
 namespace Shin1x1\MarkdownCodeExtractor;
 
+use Pinq\Collection;
+
 class MarkdownPathExtractor
 {
     /**
      * @param string $basePath
-     * @return array
+     * @return Collection
      */
-    public function extractPaths(string $basePath): array
+    public function extractPaths(string $basePath): Collection
     {
         if (is_dir($basePath)) {
-            return glob($basePath . '/*.md');
+            return Collection::from(glob($basePath . '/*.md'));
         } else {
-            return [$basePath];
+            return Collection::from([$basePath]);
         }
     }
 }
