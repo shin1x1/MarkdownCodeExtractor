@@ -80,7 +80,7 @@ class MarkdownParser
      * @param callable $filter
      * @return static
      */
-    public function addFilter(callable $filter): MarkdownParser
+    public function addFilter(callable $filter): self
     {
         $this->filters[] = $filter;
         return $this;

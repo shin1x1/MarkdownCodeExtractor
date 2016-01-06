@@ -37,9 +37,8 @@ class MarkdownCodeExtractor
      */
     public function extractToFiles(string $basePath)
     {
-        $paths = $this->pathExtractor->extractPaths($basePath);
-        array_walk($paths, function ($v) {
-            $this->parser->extractCodes(file_get_contents($v));
+        $this->pathExtractor->extractPaths($basePath)->apply(function (string $path) {
+            $this->parser->extractCodes(file_get_contents($path));
         });
 
         $this->publisher->publish($this->parser->getCodes());
